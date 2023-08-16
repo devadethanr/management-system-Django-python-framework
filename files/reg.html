@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .frm {
+            width: 30%;
+            height: 0%;
+            margin-top: 0%;
+            margin-left: 0%;
+            background-color: rgb(68, 151, 223);
+            padding: 6%;
+            border-radius: 25px;
+
+        }
+
+        center {
+            margin-top: 3%;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="frm">
+            <form method="POST" action="#">
+                {% csrf_token %}
+                <H2>REGISTER HERE</H2>
+                <table>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="fname" class="form-control" id="floatingInput" placeholder="Joe Doe">
+                        <label for="floatingInput">Firstname</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="lname" class="form-control" id="floatingInput" placeholder="Joe Doe">
+                        <label for="floatingInput">Lastname</label>
+                    </div>
+                     <div class="input-group mb-3">
+                         <span class="input-group-text" id="basic-addon1">@</span>
+                         <input type="text" name="uname" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                     </div>
+                     <div class="form-floating mb-3">
+                        <input type="text" name="phone" class="form-control" id="floatingInput" placeholder="Joe Doe">
+                        <label for="floatingInput">phone</label>
+                    </div>
+                     <div class="input-group mb-3">
+                         <input type="text" name="email" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                         <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+                     </div>
+                     <div class="form-floating">
+                         <input type="password" name="pass" class="form-control" id="floatingPassword" placeholder="Password">
+                         <label for="floatingPassword">Password</label>
+                     </div>
+                    </br>
+                     <div class="form-floating">
+                         <input type="password" name="cpass" class="form-control" id="floatingPassword" placeholder="Password">
+                         <label for="floatingPassword">confirm Password</label>
+                     </div></br>
+                     <div class="form-floating">
+                        <select class="form-select" name ="u_type"aria-label="Default select example">
+                            <option selected>choose user type</option>
+                            <option value="admin">Admin</option>
+                            <option value="user">user</option>
+                        </select>
+                     </div>
+                    </br>
+                </table><br>
+                <button type="submit" name="btn_submit" class="btn btn-outline-success">Register</button><br>
+                <a href="login">login here</a>
+                <a href="products">add products</a>
+            </form>
+        </div>
+    </center>
+</body>
+</html>

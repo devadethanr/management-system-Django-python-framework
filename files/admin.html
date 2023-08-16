@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_dashboard</title>
+</head>
+<body>
+    <center>
+        <h1>Riss Technologies</h1>
+        <center>
+            <h2>Welcome to admin dashboard</h2>
+            <h3>Users registered in the system</h3>
+        </center>
+        <table border="1">
+            <tr>
+                <th>
+                    Firstname
+                </th>
+                <th>
+                    Lastname
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    Email
+                </th>
+            </tr>
+            </tr>
+       
+        {%for i in list%}
+            <tr>
+                <td>
+                    {{i.f_name}}
+                </td>
+                <td>
+                    {{i.l_name}}
+                </td>
+                <td>
+                    {{i.phone}}
+                </td>
+                <td>
+                    {{i.email}}
+                </td>
+            </tr>
+       
+        {%endfor%}
+    </table>
+    </center>
+</body>
+</html>
+

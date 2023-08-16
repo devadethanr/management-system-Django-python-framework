@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view page</title>
+</head>
+<body>
+    <center>
+        <h1>Riss Technologies</h1>
+        <center>
+            <h2>View Products</h2>
+            <h3>product listing and editing </h3>
+        </center>
+        <table border="1">
+            <tr>
+                <th>
+                    Product Name
+                </th>
+                <th>
+                    Category
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Quantity
+                </th>
+            </tr>
+            </tr>
+       
+        {%for i in pr_list%}
+            <tr>
+                <td>
+                    {{i.p_name}}
+                </td>
+                <td>
+                    {{i.p_cat}}
+                </td>
+                <td>
+                    {{i.p_price}}
+                </td>
+                <td>
+                    {{i.p_quant}}
+                </td>
+                <td>
+                    <a href="/product_update/{{i.id}}">Edit</a>
+                </td>
+                
+                <td>
+                    <a href="/pd_delete/{{i.id}}">delete</a>
+                </td>
+
+            </tr>
+        {%endfor%}
+    </table>
+    </center>
+</body>
+</html>     
